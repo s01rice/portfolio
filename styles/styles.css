@@ -361,13 +361,13 @@ body .wrapper {
 }
 
 body main {
-  padding-top: 100px;
+  padding-top: 50px;
   background-color: #e3f1ff;
   color: #2b4c6d;
 }
 
 body main section {
-  margin-top: 100px;
+  margin: 50px 0;
 }
 
 body main #about {
@@ -382,6 +382,11 @@ body main .flex {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+body main .flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body main .project-container {
@@ -426,6 +431,38 @@ body main .project-container .text-container .links a {
   background-color: #e3f1ff;
   text-decoration: none;
   border-radius: 3px;
+}
+
+body main .skills-container {
+  margin-top: 50px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .skills-container li {
+  width: 100px;
+  margin: 10px;
+}
+
+body main .skills-container li i {
+  font-size: 60px;
+}
+
+body main .skills-container li p {
+  font-size: 20px;
+}
+
+body main .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, max-content))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  grid-gap: 20px;
 }
 
 body footer {

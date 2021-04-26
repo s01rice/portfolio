@@ -19,7 +19,7 @@ html {
 
 #home {
     height: 100vh;
-
+    
     .name-box {
         position: relative;
         top: 40%;
@@ -78,6 +78,24 @@ html {
         position: relative;
         justify-content: center;
         top: 30%;
+    }
+
+    .svg-div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            .svg-shape {
+                fill: $base-color;
+            }
+        }
+        
     }
 
     // animations

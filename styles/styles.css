@@ -318,6 +318,23 @@ html {
   top: 30%;
 }
 
+#home .svg-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+#home .svg-div svg {
+  width: 100%;
+  height: 100%;
+}
+
+#home .svg-div svg .svg-shape {
+  fill: #e3f1ff;
+}
+
 #home .text-fade-in {
   -webkit-animation: fadeIn ease 1s, leftShift ease 1s;
           animation: fadeIn ease 1s, leftShift ease 1s;

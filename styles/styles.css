@@ -466,9 +466,15 @@ body main .project-container {
 body main .project-container .image-container {
   height: 300px;
   width: 540px;
-  border: 1px solid red;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  text-align: center;
+}
+
+body main .project-container .image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10px;
 }
 
 body main .project-container .text-container {

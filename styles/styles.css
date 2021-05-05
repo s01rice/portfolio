@@ -434,7 +434,7 @@ body .wrapper {
 }
 
 body main {
-  padding: 20px 0;
+  padding: 40px 0;
   background-color: #e3f1ff;
   color: #2b4c6d;
 }
@@ -594,7 +594,7 @@ body footer h4 {
     height: 150px;
   }
   body main {
-    padding-top: 40px;
+    padding-top: 60px;
   }
   body main .project-container .image-container {
     width: 360px;

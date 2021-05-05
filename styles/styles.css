@@ -290,11 +290,17 @@ html, body {
   border-radius: 12px;
   background-color: #a4d1ff;
   display: inline-block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #home .name-box .button a {
   color: #e3f1ff;
   text-align: center;
+}
+
+#home .name-box .button:hover {
+  background-color: #5798da;
 }
 
 #home .name-box .button-large {

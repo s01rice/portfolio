@@ -155,7 +155,16 @@
 
             <section id="contact">
                 <h2 class="title">Contact</h2>
-                <div>
+                <div class="contact-container flex flex-wrap">
+                    <a href="#" class="mail" data-name="chau112" data-domain="uwindsor" data-tld="ca"
+                        onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+                        <p><i class="fas fa-envelope-square" aria-label="mail"></i>
+                            Email Me</p>
+                    </a>
+                    <a href="https://github.com/s01rice/">
+                        <p><i class="devicon-github-original"></i>
+                            Github</p>
+                    </a>
                 </div>
             </section>
         </div>
@@ -166,6 +175,7 @@
 
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/baa590b185.js" crossorigin="anonymous"></script>
     <script src="js/neuron.js"></script>
 </body>
 

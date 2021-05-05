@@ -593,6 +593,9 @@ body footer h4 {
   #home .svg-div {
     height: 150px;
   }
+  body main {
+    padding-top: 40px;
+  }
   body main .project-container .image-container {
     width: 360px;
   }

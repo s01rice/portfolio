@@ -6,6 +6,9 @@ $widthMouse: 52px;
 $heightMouse: 88px;
 $borderMouse: 6px;
 
+$widthMouseSmall: 39px;
+$heightMouseSmall: 66px;
+
 $posMouse: 8px;
 $posText: 2px;
 
@@ -175,4 +178,19 @@ $animDuration: 5s;
   60% { color: $colorOutline; }
   81% { color: $colorOutlineFade; }
   90% { color: $colorOutline; }
+}
+
+@media (max-width: 600px) {
+  .mouse {
+    width: $widthMouseSmall;
+    height: $heightMouseSmall;
+    &:before {
+      width: $widthMouseSmall - $borderMouse;
+      height: $heightMouseSmall - $borderMouse;
+    }
+    &:after {
+      width: $sizeTrackball;
+      height: $sizeTrackball;
+    }
+  }
 }

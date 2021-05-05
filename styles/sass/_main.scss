@@ -41,6 +41,7 @@ html {
         }
 
         .button {
+            margin: 40px 40px 0 0;
             font-size: 2rem;
             font-weight: bold;
             font-family: inherit;
@@ -60,12 +61,10 @@ html {
         }
 
         .button-large {
-            margin: 40px 20px 0 0;
             padding: 15px 40px;
         }
 
         .button-sm {
-            margin: 0 20px; 
             padding: 15px 20px;
         }
     }
@@ -75,9 +74,11 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
+        position: absolute;
         justify-content: center;
-        top: 30%;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .svg-div {
@@ -156,8 +157,8 @@ body {
         
         max-width: 1200px;
         
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
     
     main {
@@ -183,14 +184,17 @@ body {
         .flex-wrap {
             flex-wrap: wrap;
         }
-
+        .projects-container {
+            padding: 0;
+        }
         .project-container {
             background-color: white;
             margin: 40px 0;
 
             .image-container {
                 height: 300px;
-                width: 540px;
+                width: 480px;
+                line-height: 300px;
                 flex-shrink: 0;
                 text-align: center;
 
@@ -198,6 +202,7 @@ body {
                     max-width: 100%;
                     max-height: 100%;
                     padding: 10px;
+                    vertical-align: middle;
                 }
             }
 
@@ -205,18 +210,20 @@ body {
                 margin: 30px;
                 .tags {
                     display: flex;
+                    flex-wrap: wrap;
                     p {
-                        margin: 0 15px 15px 0;
+                        margin: 0 10px 10px 0;
                         padding: 3px 5px;
                         background-color: $base-color;
                         border-radius: 3px;
+                        white-space: nowrap;
                     }
                 }
 
                 .links {
                     display: flex;
                     a {
-                        margin: 30px 15px 0 0;
+                        margin: 30px 10px 0 0;
                         padding: 3px 5px;
                         background-color: $base-color;
                         text-decoration: none;
@@ -257,3 +264,109 @@ body {
     }
 }
 
+
+@media (max-width: 1000px) {
+
+    #home {
+        .name-box {
+            h1 {
+                font-size: 4rem;
+                line-height: 5rem;
+            }
+            .button {
+                font-size: 1.4rem;
+                border-radius: 8px;
+            }
+            .button-large {
+                padding: 15px 20px;
+            }
+            .button-sm {
+                padding: 15px;
+            }
+        }
+
+        .svg-div {
+            height: 150px;
+        }
+    }
+
+    body {
+        main {
+            .project-container {
+                .image-container {
+                    width: 360px;
+                }
+                .text-container {
+                    margin: 30px 15px;
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        main {
+            #projects {
+                .flex {
+                    flex-direction: column;
+                }
+                .image-container {
+                    margin-top: 20px;
+                    width: auto;
+                }
+                .text-container {
+                    margin: 10px 20px 20px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #home {
+        .name-box {
+            h1 {
+                font-size: 2.5rem;
+                line-height: 3.5rem;
+            }
+            .button {
+                margin: 20px 20px 0 0;
+                font-size: 1.2rem;
+            }
+            .button-large {
+                padding: 12px 15px;
+            }
+            .button-sm {
+                padding: 12px;
+            }
+        
+        }
+        .svg-div {
+            height: 100px;
+        }
+    }
+    body {
+        main {
+            #skills {
+                li {
+                    width: 70px;
+                    margin: 6px;
+                    i {
+                        font-size: 30px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

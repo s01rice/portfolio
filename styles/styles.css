@@ -274,6 +274,7 @@ html {
 }
 
 #home .name-box .button {
+  margin: 40px 40px 0 0;
   font-size: 2rem;
   font-weight: bold;
   font-family: inherit;
@@ -290,12 +291,10 @@ html {
 }
 
 #home .name-box .button-large {
-  margin: 40px 20px 0 0;
   padding: 15px 40px;
 }
 
 #home .name-box .button-sm {
-  margin: 0 20px;
   padding: 15px 20px;
 }
 
@@ -311,11 +310,14 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 30%;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #home .svg-div {
@@ -424,8 +426,8 @@ body .wrapper {
   margin-right: auto;
   margin-left: auto;
   max-width: 1200px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 body main {
@@ -458,6 +460,10 @@ body main .flex-wrap {
       flex-wrap: wrap;
 }
 
+body main .projects-container {
+  padding: 0;
+}
+
 body main .project-container {
   background-color: white;
   margin: 40px 0;
@@ -465,7 +471,8 @@ body main .project-container {
 
 body main .project-container .image-container {
   height: 300px;
-  width: 540px;
+  width: 480px;
+  line-height: 300px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   text-align: center;
@@ -475,6 +482,7 @@ body main .project-container .image-container img {
   max-width: 100%;
   max-height: 100%;
   padding: 10px;
+  vertical-align: middle;
 }
 
 body main .project-container .text-container {
@@ -485,13 +493,16 @@ body main .project-container .text-container .tags {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body main .project-container .text-container .tags p {
-  margin: 0 15px 15px 0;
+  margin: 0 10px 10px 0;
   padding: 3px 5px;
   background-color: #e3f1ff;
   border-radius: 3px;
+  white-space: nowrap;
 }
 
 body main .project-container .text-container .links {
@@ -501,7 +512,7 @@ body main .project-container .text-container .links {
 }
 
 body main .project-container .text-container .links a {
-  margin: 30px 15px 0 0;
+  margin: 30px 10px 0 0;
   padding: 3px 5px;
   background-color: #e3f1ff;
   text-decoration: none;
@@ -539,6 +550,84 @@ body footer {
 body footer h4 {
   margin: 0;
   padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  #home .name-box h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  #home .name-box .button {
+    font-size: 1.4rem;
+    border-radius: 8px;
+  }
+  #home .name-box .button-large {
+    padding: 15px 20px;
+  }
+  #home .name-box .button-sm {
+    padding: 15px;
+  }
+  #home .svg-div {
+    height: 150px;
+  }
+  body main .project-container .image-container {
+    width: 360px;
+  }
+  body main .project-container .text-container {
+    margin: 30px 15px;
+  }
+  body main .project-container .text-container h2 {
+    font-size: 1.3rem;
+  }
+  body main .project-container .text-container p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body main #projects .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main #projects .image-container {
+    margin-top: 20px;
+    width: auto;
+  }
+  body main #projects .text-container {
+    margin: 10px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #home .name-box h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  #home .name-box .button {
+    margin: 20px 20px 0 0;
+    font-size: 1.2rem;
+  }
+  #home .name-box .button-large {
+    padding: 12px 15px;
+  }
+  #home .name-box .button-sm {
+    padding: 12px;
+  }
+  #home .svg-div {
+    height: 100px;
+  }
+  body main #skills li {
+    width: 70px;
+    margin: 6px;
+  }
+  body main #skills li i {
+    font-size: 30px;
+  }
+  body main #skills li p {
+    font-size: 15px;
+  }
 }
 
 .mouse {
@@ -984,6 +1073,21 @@ body footer h4 {
   }
   90% {
     color: #ffffff;
+  }
+}
+
+@media (max-width: 600px) {
+  .mouse {
+    width: 39px;
+    height: 66px;
+  }
+  .mouse:before {
+    width: 33px;
+    height: 60px;
+  }
+  .mouse:after {
+    width: 10px;
+    height: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
